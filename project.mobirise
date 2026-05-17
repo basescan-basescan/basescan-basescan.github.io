@@ -1,0 +1,147 @@
+{
+  "settings": {
+    "name": "basescan-basescan",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "6.1.12",
+    "siteFonts": [],
+    "favicon": "@PROJECT_PATH@/assets/images/basescan-favicon.png",
+    "imageResize": false,
+    "usedWebp": false,
+    "robotsSwitcher": true,
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\nSitemap: https://basescan-basescan.github.io/sitemap.xml/",
+    "sitemapSwitcher": true,
+    "siteUrl": "https://basescan-basescan.github.io/",
+    "sitemapSwitcherAuto": "on",
+    "mbrsiteDomain": "4oz4bx3r6n",
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 2,
+    "versionPublish": "6.1.12"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "BaseScan - Base ETH Explorer",
+        "meta_descr": "Explore BaseScan, the leading blockchain explorer for the Base network. Learn how it tracks transactions, verifies smart contracts, monitors wallets, and powers transparency in the Base ecosystem.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "img": {
+              "object-fit": "contain",
+              "border-radius": "0 !important"
+            }
+          },
+          "_name": "image04",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image03\" group=\"Image & Video\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showText\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n\n    <div class=\"image-block m-auto\">\n        <a href=\"https://basescan.org/\"><img src=\"@PROJECT_PATH@/assets/images/basescan.png\" alt=\"basescan\"></a>\n        <div mbr-if=\"showText\">\n            <p class=\"mbr-text mt-4 pb-4 align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                Unlock your true path!\n            </p>\n        </div>\n    </div>\n</section>",
+          "_cid": "vjRCk3Phxe",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "image04-0"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "@media (max-width: 767px)": {
+                "padding": "2rem 1.5rem"
+              },
+              "@media (min-width: 768px) and (max-width: 991px)": {
+                "padding": "2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "4rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article07\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\">\n            <b><a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>- Base ETH Explorer</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b><a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan</a>: The Blockchain Explorer Powering the Base Ecosystem</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">As blockchain adoption accelerates, transparency and accessibility have become essential for users, developers, and businesses operating in decentralized ecosystems. On the Base network, one platform plays a central role in providing this visibility: BaseScan.<br><br><a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>is the primary blockchain explorer for the Base Layer 2 network, enabling users to track transactions, inspect wallets, analyze smart contracts, monitor token activity, and interact with on-chain data in real time. Built by the same team behind Etherscan, BaseScan delivers a familiar and powerful interface for navigating the rapidly growing Base ecosystem.<br><br><b>What Is <a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan</a><br></b><a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>is a blockchain explorer designed specifically for the Base network, Coinbase’s Ethereum Layer 2 chain built using the Optimism OP Stack. A blockchain explorer functions like a search engine for blockchain data, allowing users to access and verify transactions recorded on-chain.<br><br><a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>indexes every block, transaction, token transfer, smart contract interaction, and wallet address on the Base network. This information is then displayed through an intuitive web interface and developer APIs. <br>Users can search using:<br>. Wallet addresses , Transaction hashes , Block numbers , Token contracts<br>. ENS or Basenames<br>The explorer provides transparency by making blockchain activity publicly searchable and independently verifiable.<br><br><b>The Role of BaseScan in the Base Ecosystem<br></b>The Base ecosystem has grown rapidly since the public launch of the network in August 2023. As decentralized finance (DeFi), NFTs, gaming, and consumer applications expanded on Base, <a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>became the default infrastructure layer for observing and validating on-chain activity.<br><br>Wallets and decentralized applications frequently link directly to <a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>whenever users click “View Transaction” or “View on Explorer.” This makes the platform a core utility for both beginners and advanced blockchain users.<br><b>.&nbsp; </b>Verifying whether transactions succeeded<br><b>.&nbsp; </b>Monitoring wallet balances and token holdings<br><b>.&nbsp; </b>Checking smart contract code<br><b>.&nbsp; </b>Auditing token transfers<br><b>.&nbsp; </b>Viewing gas fees and network performance<br><b>.&nbsp; </b>Supporting blockchain analytics and development<br><br><b>Key Features of BaseScan<br>1. Transaction Tracking :-</b><br>One of <a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>most widely used features is transaction tracking. Users can paste a transaction hash into the search bar to instantly view:<br><b>.&nbsp; </b>Sender and receiver addresses , Gas fees paid , Timestamp<br><b>.&nbsp;&nbsp;</b>Block confirmation details , Transaction status , Token transfers involved<br>This functionality is especially important during token swaps, NFT purchases, or bridge transfers.<br><br><b>2. Wallet Analytics :-<br></b><a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>provides detailed wallet pages displaying:<br><b>.&nbsp; </b>ETH balances , ERC-20 token holdings , NFT collections , Transaction history<br><b>.&nbsp; </b>Internal transactions , Contract interactions<br>Users often rely on these wallet analytics to monitor portfolio activity and verify incoming payments.<br><br><b>3. Smart Contract Verification :-<br></b>Developers can upload and verify smart contract source code directly on <a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan</a>. Verified contracts allow users to inspect the code behind decentralized applications, improving transparency and trust.<br><br>Verified contracts also enable “Read Contract” and “Write Contract” functionality, allowing direct interaction with smart contracts from the explorer interface.<br><br><b>4. Token Tracking :-<br></b><a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>supports comprehensive token analytics, including:<br><b>.&nbsp; </b>Token holder distribution , Transfer history , Market activity<br><b>.&nbsp; </b>Contract addresses , Supply information<br>This feature is heavily used by traders and researchers evaluating newly launched Base ecosystem tokens.<br><br><b>5. API Services :-<br></b>Beyond the web interface, <a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>provides APIs for developers and businesses. These APIs can retrieve blockchain data programmatically, enabling integrations for:<br><b>.&nbsp; </b>Wallet applications , Portfolio trackers , Analytics dashboards<br><b>.&nbsp; </b>DeFi platforms , Payment processors<br>The API structure is compatible with Etherscan’s architecture, allowing many existing Ethereum-based tools to integrate with Base using minimal changes.<br><br><b>Why BaseScan Matters<br></b>Blockchain technology emphasizes decentralization and transparency, but raw blockchain data is difficult for average users to interpret. <a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>bridges this gap by transforming complex blockchain records into readable and searchable information.<br>This transparency creates several benefits:<br><br><b>Security<br></b>Users can independently verify transactions instead of relying solely on centralized platforms or wallet interfaces.<br><b>Trust</b><br>Projects operating on Base can demonstrate legitimacy by publishing verified contracts and transparent token data.<br><b>Accessibility<br></b>Even non-technical users can inspect blockchain activity through a simple browser interface.<br><b>Development Efficiency<br></b>Developers gain debugging tools, analytics, and APIs that streamline application development.<br>In many ways, blockchain explorers like <b>BaseScan </b>serve as the public infrastructure layer that makes decentralized ecosystems usable.<br><br><b>Common Use Cases<br>Verifying Payments<br></b>Businesses and individuals use BaseScan to confirm crypto payments instantly by checking transaction confirmations.<br><b>Researching Tokens<br></b>Traders analyze token distribution, holder concentration, and transaction activity before investing in newly launched assets.<br><b>Debugging Smart Contracts<br></b>Developers inspect failed transactions, gas usage, and emitted event logs during testing and deployment.<br><b>Monitoring DeFi Activity<br></b>Users track lending, swaps, staking, and liquidity interactions on decentralized applications built on Base.<br><b>Identifying Scam Tokens<br></b>Community discussions often recommend <a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>as a first step for checking suspicious token contracts and wallet behavior. Users commonly inspect contract permissions, token supply controls, and holder distributions to detect scams.<br><br><b>Challenges and Limitations<br></b>Although <a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>is highly reliable, it is not immune to occasional issues. During periods of high network activity, users sometimes report indexing delays where transactions appear on-chain before showing up in the explorer interface.<br><br><b>The Future of BaseScan<br></b>As the Base network continues to grow, <a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>is expected to evolve with additional analytics, Layer 2 insights, and developer tooling. Increasing adoption of decentralized applications, stablecoin payments, NFTs, and on-chain consumer apps will likely expand the explorer’s role even further.<br><br>The broader blockchain industry increasingly depends on explorers not only for transparency, but also for compliance, analytics, research, and ecosystem discovery. BaseScan sits at the center of that infrastructure for the Base network.<br><br><b>Conclusion<br></b><a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>has become an essential tool within the Base ecosystem by making blockchain activity transparent, searchable, and understandable. From transaction verification and smart contract analysis to token tracking and developer APIs, the platform serves as the primary gateway for interacting with on-chain data on Base.<br><br>As Layer 2 adoption accelerates and blockchain applications move toward mainstream use, tools like <a href=\"https://basescan.org/\" class=\"text-primary\">BaseScan </a>will continue playing a critical role in improving trust, usability, and accessibility across decentralized systems.</p>\n              </div>\n            </div>\n            \n            \n            \n          </div>\n          <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "vjRClcOl6Z",
+          "_anchor": "article07-1",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
